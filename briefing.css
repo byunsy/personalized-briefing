@@ -1,0 +1,176 @@
+/* ============================================================================
+FOR ALL 
+============================================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ============================================================================
+CUSTOM PROPERTIES
+============================================================================ */
+:root {
+  --ff-primary: "Roboto", sans-serif;
+
+  --fw-reg: 400;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #16e0bd;
+
+  --fs-h1: 3rem;
+  --fs-h2: 1.5rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================================================
+GENERAL STYLES 
+============================================================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+section {
+  padding: 2.5em 5em;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+:focus {
+  outline: 2px solid var(--clr-accent);
+  outline-offset: 2px;
+}
+
+.section_title {
+  text-align: center;
+  background: #b5ead7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 200ms ease-in-out, 500ms;
+}
+
+a:hover {
+  color: lightgray;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+
+/* ============================================================================
+TITLE SECTION 
+============================================================================ */
+.title_section {
+  position: relative;
+  text-align: center;
+}
+
+/* ============================================================================
+WEATHER SECTION 
+============================================================================ */
+
+.table_weather td {
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+
+.w_head::before {
+  content: "- ";
+}
+
+.w_data::before {
+  content: ": ";
+}
+
+.throughout_day {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+  justify-content: center;
+}
+
+.throughout_day li {
+  padding: 0 2em;
+}
+
+.weather_section {
+  position: relative;
+}
+
+/* ============================================================================
+COVID SECTION 
+============================================================================ */
+.covid_section {
+  position: relative;
+}
+
+.table_covid_cases td {
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+}
+
+.c_summary {
+  padding-bottom: 1em;
+}
+
+.table_covid_states td {
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+}
+
+.c_data::before {
+  content: ": ";
+}
+
+/* ============================================================================
+NEWS SECTION 
+============================================================================ */
+.usnews_section {
+  position: relative;
+}
+
+.worldnews_section {
+  position: relative;
+}
+
+.news {
+  margin-bottom: 3em;
+}
+
+.bar::after {
+  content: "";
+  display: block;
+  width: 5em;
+  height: 1px;
+  margin: 0.5em auto 5em;
+  background-color: lightgray;
+  opacity: 0.6;
+}
