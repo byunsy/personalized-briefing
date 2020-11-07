@@ -7,9 +7,15 @@ headers = {
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36"
 }
 
-
 """ ===========================================================================
-
+PROCEDURE:
+    get_weather
+PARAMETERS:
+    None - no parameters
+PURPOSE:
+    accesses weather.com and scrapes weather data of interest for Grinnell, IA
+PRODUCES:
+    weather_info, a tuple holding 10 different weather data
 =========================================================================== """
 def get_weather():
 
@@ -77,7 +83,15 @@ def get_weather():
     return weather_info
 
 """ ===========================================================================
-
+PROCEDURE:
+    get_covid_cases
+PARAMETERS:
+    None - no parameters
+PURPOSE:
+    accesses the New York Times COVID-19 section and scrapes relevant data 
+    regarding COVID-19 cases in Iowa and its neighboring states 
+PRODUCES:
+    covid_info, a tuple holding 5 different COVID-19 data
 =========================================================================== """
 def get_covid_cases():
 
@@ -119,6 +133,7 @@ def get_covid_cases():
 
     # =========================================================================
 
+    # Create an empty dictionary to add key/value below
     covid_states = {}
 
     for state in states:
@@ -131,6 +146,7 @@ def get_covid_cases():
         counts = soup2.find("tr", class_="counts__row")
         new_cases = counts.find_all("td")[2].get_text()
 
+        # Add to the dictionary (key:state, value:new_cases)
         covid_states[state.title()] = new_cases
 
     covid_info = (num_cases, cnt_date, tot_cases, story_p, covid_states)
@@ -138,7 +154,16 @@ def get_covid_cases():
     return covid_info
 
 """ ===========================================================================
-
+PROCEDURE:
+    get_us_headlines
+PARAMETERS:
+    None - no parameters
+PURPOSE:
+    accesses the New York Times main page and scrapes three different top 
+    U.S. headline news displayed there
+PRODUCES:
+    us_headlines, a list of three tuples, each of which holds the news title, 
+    one-line description, and a link to the page
 =========================================================================== """
 def get_us_headlines():
 
@@ -162,6 +187,7 @@ def get_us_headlines():
 
     # =========================================================================
     
+    # Create an empty list to append headline news below
     us_headlines = []
 
     for idx, box in enumerate(boxes):
@@ -190,7 +216,16 @@ def get_us_headlines():
     return us_headlines
 
 """ ===========================================================================
-
+PROCEDURE:
+    get_world_headlines
+PARAMETERS:
+    None - no parameters
+PURPOSE:
+    accesses BBC World News and scrapes three different top world headline 
+    news displayed there
+PRODUCES:
+    world_headlines, a list of three tuples, each of which holds the news 
+    title, one-line description, and a link to the page
 =========================================================================== """
 def get_world_headlines():
 
@@ -212,6 +247,7 @@ def get_world_headlines():
     
     # =========================================================================
     
+    # Create an empty list to append headline news below
     world_headlines = []
 
     for idx, box in enumerate(boxes):
