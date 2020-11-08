@@ -259,7 +259,10 @@ def get_world_headlines():
         link = "https://www.bbc.com" + box.a["href"]
 
         # Get one-line summary of headline
-        desc = box.p.get_text()
+        if box.p:
+            desc = box.p.get_text()
+        else:
+            desc = ""
 
         world_headlines.append((headline, desc, link))
 
