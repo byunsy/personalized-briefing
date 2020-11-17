@@ -125,19 +125,19 @@ def main():
         <div class="news bar">
             <h3 class="news_title">1. {us_news1_title}</h3>
             <p>{us_news1_story}</p>
-            <a href="{us_news1_link}">Read More</a>
+            <a href="{us_news1_link}" target="_blank">Read More</a>
         </div>
 
         <div class="news bar">
             <h3 class="news_title">2. {us_news2_title}</h3>
             <p>{us_news2_story}</p>
-            <a href="{us_news2_link}">Read More</a>
+            <a href="{us_news2_link}" target="_blank">Read More</a>
         </div>
 
         <div class="news">
             <h3 class="news_title">3. {us_news3_title}</h3>
             <p>{us_news3_story}</p>
-            <a href="{us_news3_link}">Read More</a>
+            <a href="{us_news3_link}" target="_blank">Read More</a>
         </div>
     </section>
 
@@ -149,19 +149,19 @@ def main():
         <div class="news bar">
             <h3 class="news_title">1. {wo_news1_title}</h3>
             <p>{wo_news1_story}</p>
-            <a href="{wo_news1_link}">Read More</a>
+            <a href="{wo_news1_link}" target="_blank">Read More</a>
         </div>
 
         <div class="news bar">
             <h3 class="news_title">2. {wo_news2_title}</h3>
             <p>{wo_news2_story}</p>
-            <a href="{wo_news2_link}">Read More</a>
+            <a href="{wo_news2_link}" target="_blank">Read More</a>
         </div>
 
         <div class="news">
             <h3 class="news_title">3. {wo_news3_title}</h3>
             <p>{wo_news3_story}</p>
-            <a href="{wo_news3_link}">Read More</a>
+            <a href="{wo_news3_link}" target="_blank">Read More</a>
         </div>
     </section>
 
