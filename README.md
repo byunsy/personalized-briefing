@@ -24,7 +24,7 @@ pip install beautifulsoup4
 
 ## Usage
 
-Clone the lane-detection repository in your directory.
+Clone the personalized-briefing repository in your directory.
 
 ```bash
 git clone https://github.com/byunsy/personalzied-briefing.git
